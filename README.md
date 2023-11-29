@@ -1,6 +1,6 @@
 # PepsiDesign
 <p align="center">
-<img src="assets/screenRecording.gif" width=700>
+<img src="screenshots/screenRecording.gif" width=700>
 </p>
 
 ### A new Landing Page Design for Pepsi made using Vue.js.
@@ -28,13 +28,13 @@ features sections are :
 
 ## Website ScreenShots:
 <p align="center">
-<img src="assets/Screenshot1.png" width=700>
+<img src="screenshots/Screenshot1.png" width=700>
 </p>
 <p align="center">
-<img src="assets/Screenshot2.png" width=700>
+<img src="screenshots/Screenshot2.png" width=700>
 </p>
 <p align="center">
-<img src="assets/Screenshot3.png" width=700>
+<img src="screenshots/Screenshot3.png" width=700>
 </p>
 
 ## Support

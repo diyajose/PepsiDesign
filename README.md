@@ -13,7 +13,7 @@ This site is a simple landing page for Pepsi with a few basic sections built wit
 (DISCLAIMER: This is just a demo site)
 
 ### Link to the Website 
-<a href="#">Pepsi Landing Page</a>
+<a href="https://pepsi-landing.pages.dev/">Pepsi Landing Page</a>
 
 
 ## Features

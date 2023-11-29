@@ -12,15 +12,13 @@
 This site is a simple landing page for Pepsi with a few basic sections built with Vue.js. It is demonstrated as a vibrant, user-friendly platform dedicated to showcasing Pepsi's products and latest news. 
 (DISCLAIMER: This is just a demo site)
 
+### Link to the Website 
+<a href="https://pepsi-landing.pages.dev/">Pepsi Landing Page</a>
+
 
 ## Features
-features sections are :
-* Home
-* Products
-* What's New
-* Newsletter
-* Contact.
-  These are Dummy Contents
+*  The main feature is dynamic content update implemented using  Vue.js, handled by the framework's reactivity system.
+* features sections are: Home, Products, What's New, Newsletter, and Contact. (These are Dummy Contents)
 
 ## Technology Stack
 * Vue.js: The front-end is built using Vue.js, a progressive JavaScript framework for building user interfaces.

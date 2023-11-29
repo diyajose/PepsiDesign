@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pepsi</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:'Poppins', sans-serif;
+        }
+        .hero-section {
+            position: relative;
+            min-height: 100vh;
+            /* height: auto; */
+            width: 100%;
+            padding: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #0062be;
+            transition: 0.5s;
+        }
+        .nav-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-bar ul {
+            display: flex;
+            list-style: none;
+            position: relative;
+        }
+        .nav-bar a {
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            margin-left: 40px;
+        }
+        .nav-bar img {
+            position: relative;
+            max-width: 80px;
+        }
+        .content {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .textbox {
+            position: relative;
+            max-width: 600px;
+        }
+        .textbox h1 {
+            color: #fff;
+            font-weight: 900;
+            font-size: 4em;
+            line-height: 1.5em;
+        }
+        .textbox span {
+            font-size: 2em;
+        }
+        .textbox p {
+            color: #fff;
+        } 
+        .textbox a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 8px 20px;
+            background: #fff;
+            color: #111;
+            border-radius: 40px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        .imgbox {
+            width: 600px;
+            display: flex;
+            padding-right: 50px;
+            margin-top: 50px;
+            justify-content: flex-end;
+        }
+        .imgbox img {
+            width: 200px;
+            max-width: 260px;
+        }
+        .thumb {
+            position: absolute;
+            left: 50%;
+            bottom: 20px;
+            transform: translateX(-50%);
+            display: flex;
+        }
+        .thumb li {
+            list-style: none;
+            display: inline-block;
+            margin: 0 20px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        .thumb li:hover {
+            transform: translateY(-15px);
+        }
+        .thumb img {
+            max-width: 40px;
+        }
+
+    </style>
+</head>
+<body>
+    <section class="hero-section" id="main-div" :style ="`background-color:${color}`">
+        <nav class="nav-bar">
+            <a href="#"><img src="logo.png" alt=""></a>
+            <ul>
+                <a href="#">
+                    <li>Home</li>
+                </a>
+                <a href="#">
+                    <li>Products</li>
+                </a>
+                <a href="#">
+                    <li>What's New</li>
+                </a>
+                <a href="#">
+                    <li>Newsletter</li>
+                </a>
+                <a href="#">
+                    <li>Contact</li>
+                </a>
+            </ul>
+        </nav>
+        <div class="content">
+            <div class="textbox">
+                <h1>THAT'S WHAT <br> <span>I LIKE !</span></h1>
+                <p>Pepsi is a world-renowned carbonated soft drink, 
+                    known for its bold, refreshing taste and its iconic blue, red, 
+                    and white branding. It was created in 1893 by Caleb Bradham, 
+                    a pharmacist from New Bern, North Carolina, and was originally named "Brad's Drink". 
+                    It was renamed as Pepsi-Cola in 1898, and then shortened to Pepsi in 1961.</p>
+                   <a href="#">View All Products</a>
+            </div>
+            <div class="imgbox" >
+                <img :src="image" alt="">
+            </div>
+        </div>
+        <ul class="thumb">
+            <!-- <li><img src="pepsi001.png"></li>
+            <li><img src="pepsi002.png"></li>
+            <li><img src="pepsi003.png"></li> -->
+            <li v-for="i in pepsi" @click="changeColor(i.colors,i.img)"><img :src="i.img" alt=""></li>  <!--  : for dynamic -->
+        </ul>
+    </section>
+    <!-- <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.imgbox img').src = anything;
+        }
+        function changeBgColor(color){
+            const sec = document.querySelector('.hero-section')
+            sec.style.backgroundColor = color;
+        
+        }
+
+    </script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+    <script >
+        new Vue({
+           el:"#main-div",
+           data :{
+           pepsi:[
+                {img:'pepsi001.png',colors:'#0062be'},
+                {img:'pepsi002.png',colors:'#e60c2c'},
+                {img:'pepsi003.png',colors:'#1e1e1e'}
+            ],
+            color:"#0062be",
+            image:"pepsi001.png"
+           },
+           methods :{
+            alert(){
+                alert(`${this.name} is a manda poocha`)
+            },
+            changeColor(c,i){
+                this.color =c;
+                this.image =i;
+
+            }
+           }
+              })
+    </script>
+</body>
+</html>
